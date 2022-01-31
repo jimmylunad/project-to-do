@@ -1,0 +1,53 @@
+.title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding: .8rem 0;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #C6D1DB;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title h1 {
+  font-style: italic;
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.7rem;
+  display: inline-block;
+}
+
+.info {
+  text-align: center;
+}
+
+.infoUl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.infoUl li {
+  margin-bottom: 1rem;
+}
+
+.infoUl li a {
+  color: #363C44;
+}
+
+.infoUl li h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.infoUl li span {
+  font-size: .8rem;
+  color: #5CA8E0
+}

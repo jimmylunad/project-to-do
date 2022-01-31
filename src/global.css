@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200;1,600&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -11,4 +13,6 @@ body {
 body {
   background: linear-gradient(#FEFEFE 60%, #EDF0F3);
   background-attachment: fixed;
+  font-family: 'Raleway', sans-serif;
+  color: #363C44;
 }
