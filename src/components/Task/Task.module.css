@@ -40,6 +40,12 @@
   align-items: center;
   justify-content: center;
   border: 0;
+  transform: scale(1);
+  animation: 4s ease;
+}
+
+.button:active {
+  transform: scale(.85);
 }
 
 .buttonSend {

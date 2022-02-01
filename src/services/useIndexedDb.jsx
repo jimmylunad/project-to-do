@@ -21,13 +21,17 @@ const useIndexedDb = () => {
     }
   };
 
-  const remove = async (data) => db.taks.remove(data.id);
+  const remove = async (id) => db.taks.delete(id);
   const getAll = async () => db.taks.toArray();
+  const getOrderBy = async (data) => db.taks.orderBy(data.column).reverse().toArray();
+  const update = async (id, data) => db.taks.update(id, data);
 
   return {
     save,
     remove,
     getAll,
+    getOrderBy,
+    update,
   };
 };
 

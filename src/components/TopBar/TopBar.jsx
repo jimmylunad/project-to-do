@@ -6,9 +6,10 @@ import Modal from '../Modal';
 import DeveloperInfo from '../DeveloperInfo';
 
 import { ReactComponent as IconInfo } from '../../assets/svg/info.svg';
+import { ReactComponent as IconCheckbox } from '../../assets/svg/checkbox.svg';
 import { ReactComponent as IconTrash } from '../../assets/svg/trash.svg';
 
-const TopBar = () => {
+const TopBar = ({ action, trash }) => {
   const [active, setActive] = useState(false);
 
   const handleModal = () => {
@@ -31,7 +32,8 @@ const TopBar = () => {
         </div>
         <div className={styles.btn}>
           <ButtonTopBar
-            ico={IconTrash}
+            ico={trash ? IconTrash : IconCheckbox}
+            action={action}
           />
         </div>
       </div>
