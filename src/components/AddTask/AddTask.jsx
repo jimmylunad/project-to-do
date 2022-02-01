@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-// import useIndexedDb from '../../services/useIndexedDb';
 import styles from './AddTask.module.css';
 
-const AddTask = ({ action }) => {
+const AddTask = ({ action, info }) => {
   const [value, setValue] = useState('');
   const textareaRef = useRef(null);
 
@@ -26,7 +25,7 @@ const AddTask = ({ action }) => {
           type="text"
           onChange={handleChange}
           ref={textareaRef}
-          defaultValue={value}
+          defaultValue={info?.title || value}
           placeholder="Add new task..."
         />
         <button className={styles.buttonSave} type="submit" disabled={!value}>Save</button>
