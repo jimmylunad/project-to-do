@@ -1,9 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 // import useIndexedDb from '../../services/useIndexedDb';
 import styles from './AddTask.module.css';
 
 const AddTask = ({ action }) => {
   const [value, setValue] = useState('');
+  const textareaRef = useRef(null);
+
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  }, []);
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -18,6 +25,7 @@ const AddTask = ({ action }) => {
         <textarea
           type="text"
           onChange={handleChange}
+          ref={textareaRef}
           defaultValue={value}
           placeholder="Add new task..."
         />
