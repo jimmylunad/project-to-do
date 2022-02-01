@@ -1,6 +1,6 @@
 import styles from './Task.module.css';
-import IconCheck from '../../assets/svg/check.svg';
-import IconTrash from '../../assets/svg/cross.svg';
+import { ReactComponent as IconCheck } from '../../assets/svg/check.svg';
+import { ReactComponent as IconTrash } from '../../assets/svg/cross.svg';
 
 const Task = ({
   options,
